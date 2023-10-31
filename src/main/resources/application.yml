@@ -1,0 +1,28 @@
+server:
+  port: 9090
+  
+spring:
+  profiles:
+    active:
+    - prod
+    
+  datasource:
+    url: jdbc:mysql://localhost:3306/spring_blog
+    username: root
+    password: root
+    
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+  
+#  security:
+#    oauth2:
+#      resourceserver:
+#        jwt:
+#          jwk-set-uri: http://localhost:8080/realms/master/protocol/openid-connect/certs
+  
+claim:
+  aud: fitnessapp
+
+jwkSetUri: http://localhost:8080/realms/master/protocol/openid-connect/certs

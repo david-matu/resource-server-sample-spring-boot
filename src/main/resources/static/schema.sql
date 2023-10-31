@@ -1,0 +1,21 @@
+CREATE TABLE IF NOT EXISTS `workout` (
+`id` INT NOT NULL AUTO_INCREMENT,
+`user` VARCHAR(45) NULL,
+`start` DATETIME NULL,
+`end` DATETIME NULL,
+`difficulty` INT NULL,
+PRIMARY KEY (`id`));
+
+
+
+INSERT IGNORE INTO `workout`
+(`id`, `user`, `start`, `end`, `difficulty`) VALUES
+(1, 'bill', '2020-06-10 15:05:05', '2020-06-10 16:10:07', '3');
+INSERT IGNORE INTO `workout`
+(`id`, `user`, `start`, `end`, `difficulty`) VALUES(2, 'rachel', '2020-06-10 15:05:10', '2020-06-10 16:10:20', '3');
+INSERT IGNORE INTO `workout`
+(`id`, `user`, `start`, `end`, `difficulty`) VALUES
+(3, 'bill', '2020-06-12 12:00:10', '2020-06-12 13:01:10', '4');
+INSERT IGNORE INTO `workout`
+(`id`, `user`, `start`, `end`, `difficulty`) VALUES
+(4, 'rachel', '2020-06-12 12:00:05', '2020-06-12 12:00:11', '4');
